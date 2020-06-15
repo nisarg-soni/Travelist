@@ -10,23 +10,31 @@ module.exports = ({ items }) => {
 	} else {
 		const renderedItems = items
 			.map((item) => {
-				const check = item.status ? 'checked' : '';
+				// const check = item.status ? 'checked' : '';
 				return `
-            <div>
-            <label>${item.name} -- ${item.quantity}</label> 
-            <form method="POST" action="/remove">
+				<li class="list-group-item d-inline-flex">
+			<div class="card bg-light" >
+			<div class="card-body">
+			<form method="POST" action="/remove">
+             
+			<div >${item.name}</div>
+			<div >${item.quantity}</div>
             <input hidden value="${item.name}" name="itemName" >
-            <button>remove</button>
-            </form>
+			<button class="btn btn-outline-primary">remove</button>
+			</div>
+			</form>
+			</div>
+			</li>
             `;
 			})
 			.join('');
 
 		return layout({
 			content: `
-            <h1>Your Travel Check-list</h1>
+			<h1 styles="padding-top : 500px">Your Travel Check-list</h1>
+			<ul class="list-group list-group-flush">
             ${renderedItems}
-            
+            </ul>
             `
 		});
 	}

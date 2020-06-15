@@ -26,6 +26,7 @@ router.post('/', async (req, res) => {
 	});
 
 	res.send(listShowTemplate({ items: list.items }));
+	console.log('post1');
 });
 
 //To get page when starting
@@ -37,6 +38,7 @@ router.get('/', async (req, res) => {
 	const list = await listRepo.getOne(req.session.listID);
 
 	res.send(listShowTemplate({ items: list.items }));
+	console.log('get1');
 });
 
 //To remove item from list.
@@ -49,7 +51,8 @@ router.post('/remove', async (req, res) => {
 
 	await listRepo.update(req.session.listID, { items });
 
-	res.redirect('/');
+	res.send(listShowTemplate({ items }));
+	console.log('post2');
 });
 
 //To clear cookie and thus clear list.

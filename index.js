@@ -12,7 +12,9 @@ app.use(
 	})
 );
 app.use(listRouter);
+app.use('/public', express.static('public'));
 
-app.listen(3069, () => {
-	console.log('listening...');
+const port = 3000;
+app.listen(port, () => {
+	console.log(`listening at port : ${port}`);
 });
