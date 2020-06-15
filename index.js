@@ -13,6 +13,7 @@ app.use(
 );
 app.use(listRouter);
 
-app.listen(3069, () => {
-	console.log('listening...');
+const port = 3000;
+app.listen(port, () => {
+	console.log(`listening on port : ${port}`);
 });
