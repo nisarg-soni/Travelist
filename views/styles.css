@@ -1,0 +1,41 @@
+#app-name {
+	color: black;
+	font-family: 'Balsamiq Sans', cursive;
+	font-size: 100px;
+}
+
+#addItemForm {
+	margin-left: auto;
+	margin-right: auto;
+	padding: auto;
+	padding-top: 20px;
+	padding-bottom: 30px;
+	align-content: center;
+}
+
+.list-empty {
+	margin: auto;
+	text-align: center;
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+	.logo {
+		display: none;
+	}
+	#app-name {
+		font-size: 60px;
+	}
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) {
+} */
